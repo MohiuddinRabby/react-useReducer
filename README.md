@@ -1,6 +1,7 @@
 ## Example of React hook useReducer
 #### Code
-```
+
+```js
 import React, { useReducer } from "react";
 
 const initialState = 0;
@@ -40,4 +41,5 @@ const Counter = () => {
 };
 
 export default Counter;
+
 ```
