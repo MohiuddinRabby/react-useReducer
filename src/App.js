@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Counter from './component/Counter';
+import ReducerCount from './components/ReducerCount/ReducerCount';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <Counter/>
+    <div>
+      <ReducerCount></ReducerCount>
     </div>
   );
 }

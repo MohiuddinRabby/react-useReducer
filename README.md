@@ -1,5 +1,5 @@
 ## Example of React hook useReducer
-#### Code
+#### example-1
 
 ```js
 import React, { useReducer } from "react";
