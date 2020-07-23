@@ -9,7 +9,7 @@ const PatientManagement = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({ type: 'ADD_PATIENT', name: nameRef.current.value, id: state.patients.length + 1 })
-        console.log(nameRef.current.value);
+        nameRef.current.value = '';
     }
     return (
         <div>
@@ -17,6 +17,9 @@ const PatientManagement = () => {
             <form onSubmit={handleSubmit}>
                 <input ref={nameRef} />
             </form>
+            {
+                state.patients.map(pt => <li>{pt.name}</li>)
+            }
         </div>
     );
 };
