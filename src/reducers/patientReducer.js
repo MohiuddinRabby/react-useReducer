@@ -6,7 +6,8 @@ export const patientReducer = (state, action) => {
                 id: action.id,
                 name: action.name
             }
-            return [...state, newPatient];
+            const allPatients = [...state.patients, newPatient]
+            return { patients: allPatients };
         case 'REMOVE_PATIENT':
             return state;
         default:
