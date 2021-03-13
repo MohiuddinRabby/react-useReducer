@@ -5,6 +5,7 @@ import CounterTwoIncrement from "./CounterTwoIncrement";
 
 const CounterOne = () => {
   const { state } = useContext(CounterContext);
+
   return (
     <div>
       <h1>Counter-One</h1>

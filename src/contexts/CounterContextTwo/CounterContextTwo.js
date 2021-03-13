@@ -7,7 +7,7 @@ import { DECREMENT, INCREMENT } from "../../reducers/CounterReducerTwo/types";
 
 export const CounterContextTwo = createContext();
 export const CounterContextTwoProvider = (props) => {
-  const [state, dispatch] = useReducer(counterReducerTwoFunc, initialState);
+  const [stateTwo, dispatch] = useReducer(counterReducerTwoFunc, initialState);
   const incrementCounterTwo = () => {
     dispatch({ type: INCREMENT });
   };
@@ -16,7 +16,7 @@ export const CounterContextTwoProvider = (props) => {
   };
   return (
     <CounterContextTwo.Provider
-      value={{ state, incrementCounterTwo, decrementCounterTwo }}
+      value={{ stateTwo, incrementCounterTwo, decrementCounterTwo }}
     >
       {props.children}
     </CounterContextTwo.Provider>
