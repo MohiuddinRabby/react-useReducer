@@ -1,13 +1,15 @@
 import React from "react";
-import ApiOne from "./components/ApiOne/ApiOne";
-import { ApiOneContextProvider } from "./contexts/ApiOneContext/ApiOneContext";
+import Cart from "./components/Cart/Cart";
+import NavCart from "./components/Cart/NavCart";
+import { CartContextProvider } from "./contexts/CartContext/CartContext";
 
 const App = () => {
   return (
     <div>
-      <ApiOneContextProvider>
-        <ApiOne />
-      </ApiOneContextProvider>
+      <CartContextProvider>
+        <NavCart />
+        <Cart />
+      </CartContextProvider>
     </div>
   );
 };
