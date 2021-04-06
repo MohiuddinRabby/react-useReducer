@@ -1,15 +1,13 @@
 import React from "react";
-import Cart from "./components/Cart/Cart";
-import NavCart from "./components/Cart/NavCart";
-import { CartContextProvider } from "./contexts/CartContext/CartContext";
+import ApiTwo from "./components/ApiTwo/ApiTwo";
+import { ApiTwocontextProvider } from "./contexts/ApiTwoContext/ApiTwoContext,";
 
 const App = () => {
   return (
     <div>
-      <CartContextProvider>
-        <NavCart />
-        <Cart />
-      </CartContextProvider>
+      <ApiTwocontextProvider>
+        <ApiTwo />
+      </ApiTwocontextProvider>
     </div>
   );
 };
