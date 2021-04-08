@@ -6,8 +6,7 @@ const App = () => {
   return (
     <div>
       <TodoContextProvider>
-
-      <Todo />
+        <Todo />
       </TodoContextProvider>
     </div>
   );
