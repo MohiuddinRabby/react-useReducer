@@ -1,13 +1,14 @@
 import React from "react";
-import ApiTwo from "./components/ApiTwo/ApiTwo";
-import { ApiTwocontextProvider } from "./contexts/ApiTwoContext/ApiTwoContext,";
+import Todo from "./components/Todo/Todo";
+import { TodoContextProvider } from "./contexts/TodoContext/TodoContext";
 
 const App = () => {
   return (
     <div>
-      <ApiTwocontextProvider>
-        <ApiTwo />
-      </ApiTwocontextProvider>
+      <TodoContextProvider>
+
+      <Todo />
+      </TodoContextProvider>
     </div>
   );
 };
