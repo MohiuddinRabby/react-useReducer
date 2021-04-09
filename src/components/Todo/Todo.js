@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import { TodoContext } from "../../contexts/TodoContext/TodoContext";
+import { ACTIONS } from "../../reducers/TodoReducer/Actions";
 
 const initialValues = {
   taskName: "",
@@ -9,7 +10,7 @@ const Todo = () => {
   const { state, dispatch } = useContext(TodoContext);
   console.log(state);
   useEffect(() => {
-    dispatch({ type: "GET_TASK_DATA" });
+    dispatch({ type: ACTIONS.GET_TASK_DATA });
   }, [dispatch]);
   return (
     <>
@@ -17,7 +18,7 @@ const Todo = () => {
         initialValues={initialValues}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           dispatch({
-            type: "ADD_TODO",
+            type: ACTIONS.ADD_TODO,
             payload: {
               id: Math.floor(Math.random() * 20) + 4,
               taskName: values.taskName,
@@ -54,9 +55,23 @@ const Todo = () => {
           </>
         )}
       </Formik>
-      {state?.taskList?.map((task) => (
-        <li key={task?.id}>{task?.taskName}</li>
-      ))}
+      <div>
+        {state?.taskList?.map((task) => (
+          <div style={{ marginTop: "10px" }} key={task?.id}>
+            <li>{task?.taskName} </li>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: ACTIONS.DELETE_TODO,
+                  payload: { id: task?.id },
+                })
+              }
+            >
+              delete
+            </button>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

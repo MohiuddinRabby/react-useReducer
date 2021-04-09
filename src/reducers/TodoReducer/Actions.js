@@ -1,0 +1,5 @@
+export const ACTIONS = {
+  GET_TASK_DATA: "GET_TASK_DATA",
+  ADD_TODO: "ADD_TODO",
+  DELETE_TODO: "DELETE_TODO",
+};
